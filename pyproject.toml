@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[project]
+name = "curve-prices-py"
+version = "1.0"
+description = "Python client for curve-prices API"
+authors = [{name = "Ben Sage"}]
+maintainers = [{name = "Ben Sage"}]
+readme = "README.md"
+keywords = ["crypto", "web3", "ethereum", "blockchain", "curve", "dex", "exchange", "tokens", "API", "swap", "data"]
+dynamic = ["dependencies"]

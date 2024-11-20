@@ -8,7 +8,7 @@ class ClientCore:
     
     def _execute_request(self, endpoint):
         res = self.session.get(self.base_url + endpoint)
-        assert res.status_code == 200, "Bad status code: {res.status_code}"
+        assert res.status_code == 200, f"Bad status code: {res.status_code}"
         return res.json()
 
     def _build_query(self, has_query: bool, **kwargs):

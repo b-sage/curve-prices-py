@@ -1,0 +1,1 @@
+from curve_prices.client import CurvePricesClient
