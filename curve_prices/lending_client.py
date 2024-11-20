@@ -119,7 +119,7 @@ class LendingClient(ClientCore):
         endpoint = f"liquidations/{chain}/{controller}/health/distribution"
         return self._execute_request(endpoint)
 
-    def get_market_cr_distirubtion(self, chain: str, controller: str):
+    def get_market_cr_distribution(self, chain: str, controller: str):
         endpoint = f"liquidations/{chain}/{controller}/cr/distribution"
         return self._execute_request(endpoint)
 
@@ -127,7 +127,7 @@ class LendingClient(ClientCore):
         endpoint = f"liquidations/{chain}/{controller}/overview" + self._build_query(False, fetch_on_chain=fetch_on_chain)
         return self._execute_request(endpoint)
 
-    def get_losses_per_band_range(self, chain: str, controller: str, start: int=None, end: int=None, statistic: str='mean'):
+    def get_market_losses_per_band_range(self, chain: str, controller: str, start: int=None, end: int=None, statistic: str='mean'):
         endpoint = f"liquidations/{chain}/{controller}/losses_per_band_range" + self._build_query(
             False,
             start=start,
@@ -136,7 +136,7 @@ class LendingClient(ClientCore):
         )
         return self._execute_request(endpoint)
 
-    def get_hard_liquidated_users(self, chain: str, controller: str, start: int=None, end: int=None):
+    def get_market_hard_liquidated_users(self, chain: str, controller: str, start: int=None, end: int=None):
         endpoint = f"liquidations/{chain}/{controller}/hard/users" + self._build_query(
             False,
             start=start,
@@ -144,7 +144,7 @@ class LendingClient(ClientCore):
         )
         return self._execute_request(endpoint)
 
-    def get_hard_liquidation_total(self, chain: str, controller: str):
+    def get_market_hard_liquidation_total(self, chain: str, controller: str):
         endpoint = f"liquidations/{chain}/{controller}/hard/total"
         return self._execute_request(endpoint)
 
