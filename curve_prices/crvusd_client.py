@@ -138,7 +138,7 @@ class CrvUsdClient(ClientCore):
         endpoint = f"savings/statistics"
         return self._execute_request(endpoint)
 
-    def get_soft_liquidation_ratio(self, chain: str, controller: str, start: int=None, end: int=None):
+    def get_market_soft_liquidation_ratio(self, chain: str, controller: str, start: int=None, end: int=None):
         endpoint = f"liquidations/{chain}/{controller}/soft_liquidation_ratio" + self._build_query(
             False,
             start=start,
@@ -146,7 +146,7 @@ class CrvUsdClient(ClientCore):
         )
         return self._execute_request(endpoint)
 
-    def get_detailed_market_liquidation_history(self, chain: str, controller: str, start: int=None, end: int=None):
+    def get_market_detailed_liquidation_history(self, chain: str, controller: str, start: int=None, end: int=None):
         endpoint = f"liquidations/{chain}/{controller}/history/detailed" + self._build_query(
             False,
             start=start,
@@ -154,7 +154,7 @@ class CrvUsdClient(ClientCore):
         )
         return self._execute_request(endpoint)
     
-    def get_aggregated_market_liquidation_history(self, chain: str, controller: str, start: int=None, end: int=None):
+    def get_market_aggregated_liquidation_history(self, chain: str, controller: str, start: int=None, end: int=None):
         endpoint = f"liquidations/{chain}/{controller}/history/aggregated" + self._build_query(
             False,
             start=start,
@@ -182,11 +182,11 @@ class CrvUsdClient(ClientCore):
         endpoint = f"liquidations/{chain}/{contoller_address}/cr/distribution"
         return self._execute_request(endpoint)
 
-    def get_health_overview(self, chain: str, controller: str, fetch_on_chain: bool=False):
+    def get_market_health_overview(self, chain: str, controller: str, fetch_on_chain: bool=False):
         endpoint = f"liquidations/{chain}/{controller}/overview" + self._build_query(False, fetch_on_chain=fetch_on_chain)
         return self._execute_request(endpoint)
 
-    def get_losses_per_band_range(self, chain: str, controller: str, start: int=None, end: int=None, statistic: str="mean"):
+    def get_market_losses_per_band_range(self, chain: str, controller: str, start: int=None, end: int=None, statistic: str="mean"):
         endpoint = f"liquidations/{chain}/{controller}/losses_per_band_range" + self._build_query(
             False,
             start=start,
@@ -195,11 +195,11 @@ class CrvUsdClient(ClientCore):
         )
         return self._execute_request(endpoint)
 
-    def get_hard_liquidated_users(self, chain: str, controller: str, start: int=None, end: int=None):
+    def get_market_hard_liquidated_users(self, chain: str, controller: str, start: int=None, end: int=None):
         endpoint = f"liquidations/{chain}/{controller}/hard/users" + self._build_query(False, start=start, end=end)
         return self._execute_request(endpoint)
 
-    def get_hard_liquidation_total(self, chain: str, controller: str):
+    def get_market_hard_liquidation_total(self, chain: str, controller: str):
         endpoint = f"liquidations/{chain}/{controller}/hard/total"
         return self._execute_request(endpoint)
 
