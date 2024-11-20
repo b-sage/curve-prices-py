@@ -2,7 +2,7 @@ from curve_prices.client_core import ClientCore
 
 class DaoClient(ClientCore):
 
-    path = 'dao/'
+    path = 'v1/dao/'
 
     def get_gauges_overview(self):
         endpoint = f"gauges/overview"

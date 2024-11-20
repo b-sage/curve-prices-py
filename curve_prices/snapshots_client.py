@@ -2,7 +2,7 @@ from curve_prices.client_core import ClientCore
 
 class SnapshotsClient(ClientCore):
 
-    path = 'snapshots/'
+    path = 'v1/snapshots/'
 
     def get_pool_snapshot(self, chain: str, address: str, start: int, end: int):
         endpoint = f"{chain}/{address}" + self._build_query(False, start=start, end=end)

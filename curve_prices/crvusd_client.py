@@ -2,7 +2,7 @@ from curve_prices.client_core import ClientCore
 
 class CrvUsdClient(ClientCore):
 
-    path = 'crvusd/'
+    path = 'v1/crvusd/'
     
     def get_llamma_ohlc(
         self, 

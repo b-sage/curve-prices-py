@@ -2,7 +2,7 @@ from curve_prices.client_core import ClientCore
 
 class LendingClient(ClientCore):
 
-    path = 'lending/'
+    path = 'v1/lending/'
 
     def get_chains(self):
         endpoint = f"chains/"

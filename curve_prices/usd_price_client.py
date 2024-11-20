@@ -2,7 +2,7 @@ from curve_prices.client_core import ClientCore
 
 class UsdPriceClient(ClientCore):
 
-    path = 'usd_price/'
+    path = 'v1/usd_price/'
 
     def get_usd_prices(self, chain: str):
         endpoint = f"{chain}"

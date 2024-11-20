@@ -2,7 +2,7 @@ from curve_prices.client_core import ClientCore
 
 class VolumeClient(ClientCore):
 
-    path = 'volume/'
+    path = 'v1/volume/'
 
     def get_pool_usd_volume(self, chain: str, address: str, start: int, end: int, interval: str='day'):
         endpoint = f"usd/{chain}/{address}" + self._build_query(

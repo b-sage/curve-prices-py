@@ -2,7 +2,7 @@ from curve_prices.client_core import ClientCore
 
 class LpOhlcClient(ClientCore):
 
-    path = 'lp_ohlc/'
+    path = 'v1/lp_ohlc/'
 
     def get_lp_ohlc(
         self,

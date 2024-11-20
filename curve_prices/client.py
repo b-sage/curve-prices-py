@@ -14,7 +14,7 @@ from curve_prices.volume_client import VolumeClient
 
 class CurvePricesClient:
 
-    def __init__(self, base_url: str="https://prices.curve.fi/v1/"):
+    def __init__(self, base_url: str="https://prices.curve.fi/"):
         self.chains = ChainsClient(base_url)
         self.crvusd = CrvUsdClient(base_url)
         self.dao = DaoClient(base_url)

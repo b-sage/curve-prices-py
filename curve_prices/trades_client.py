@@ -2,7 +2,7 @@ from curve_prices.client_core import ClientCore
 
 class TradesClient(ClientCore):
 
-    path = 'trades/'
+    path = 'v1/trades/'
 
     def get_trades(
         self, 

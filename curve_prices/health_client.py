@@ -5,5 +5,6 @@ class HealthClient(ClientCore):
     path = ''
 
     def ping(self):
-        endpoint = 'ping/'
+        endpoint = 'ping'
+        print(self.base_url + endpoint)
         return self._execute_request(endpoint)

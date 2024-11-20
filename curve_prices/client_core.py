@@ -2,7 +2,7 @@ import requests
 
 class ClientCore:
 
-    def __init__(self, base_url: str='https://prices.curve.fi/v1/'):
+    def __init__(self, base_url: str='https://prices.curve.fi/'):
         self.base_url = base_url + self.path
         self.session = requests.Session()
     

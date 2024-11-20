@@ -2,7 +2,7 @@ from curve_prices.client_core import ClientCore
 
 class LiquidityClient(ClientCore):
 
-    path = 'liquidity/'
+    path = 'v1/liquidity/'
 
     def get_liquidity(self, chain: str, address: str, page: int=1, per_page: int=1000, include_state: bool=False):
         endpoint = f"{chain}/{address}" + self._build_query(
