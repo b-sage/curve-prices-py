@@ -51,7 +51,7 @@ class CrvUsdClient(ClientCore):
         )
         return self._execute_request(endpoint)
 
-    def get_market_supply(self, chain: str, start: int, end: int):
+    def get_supply(self, chain: str, start: int, end: int):
         endpoint = f"markets/{chain}/supply" + self._build_query(False, start=start, end=end)
         return self._execute_request(endpoint)
 
